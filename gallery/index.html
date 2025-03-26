@@ -77,6 +77,25 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			z-index: 100000;
 		}</style>
 <link rel="stylesheet" id="twentytwentyfive-style-css" href="./../wp-content/themes/twentytwentyfive/style.css?ver=1.1" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="./../wp-content/plugins/wp-jquery-lightbox/lightboxes/wp-jquery-lightbox/styles/lightbox.min.css?ver=2.3.3" media="all">
+<link rel="stylesheet" id="jqlb-overrides-css" href="./../wp-content/plugins/wp-jquery-lightbox/lightboxes/wp-jquery-lightbox/styles/overrides.css?ver=2.3.3" media="all">
+<style id="jqlb-overrides-inline-css">#outerImageContainer {
+				box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+			}
+			#imageContainer{
+				padding: 6px;
+			}
+			#imageDataContainer {
+				box-shadow: 0 -4px 0 0 #fff, 0 0 4px 2px rgba(0,0,0,.1);
+				z-index: auto;
+			}
+			#prevArrow,
+			#nextArrow{
+				background-color: rgba(255,255,255,.7;
+				color: #000000;
+			}</style>
+<script src="./../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="./../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <link rel="https://api.w.org/" href="./../wp-json/index.html">
 <link rel="alternate" title="JSON" type="application/json" href="./../wp-json/wp/v2/pages/30/index.html">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="./../xmlrpc.php?rsd">
@@ -86,7 +105,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=.%2F%2Fgallery%2F">
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="./../wp-json/oembed/1.0/embed/index.html?url=.%2F%2Fgallery%2F#038;format=xml">
 <script type="importmap" id="wp-importmap">{"imports":{"@wordpress\/interactivity":".\/\/wp-includes\/js\/dist\/script-modules\/interactivity\/index.min.js?ver=907ea3b2f317a78b7b9b"}}</script>
-<script type="module" src="./../wp-includes/js/dist/script-modules/block-library/image/view.min.js?ver=acfec7b3c0be4a859b31" id="@wordpress/block-library/image/view-js-module"></script>
 <script type="module" src="./../wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=8ff192874fc8910a284c" id="@wordpress/block-library/navigation/view-js-module"></script>
 <link rel="modulepreload" href="./../wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=907ea3b2f317a78b7b9b" id="@wordpress/interactivity-js-modulepreload">
 <style class="wp-fonts-local">@font-face{font-family:Manrope;font-style:normal;font-weight:200 800;font-display:fallback;src:url('./../wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2') format('woff2');}
@@ -130,43 +148,23 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		<h1 class="wp-block-post-title">Gallery</h1>
 		<div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <figure class="wp-block-gallery alignwide has-nested-images columns-2 is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex">
-<figure data-wp-context="{&quot;imageId&quot;:&quot;67e489c40af23&quot;}" data-wp-interactive="core/image" class="wp-block-image size-full has-custom-border is-style-default wp-lightbox-container" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img fetchpriority="high" decoding="async" width="2560" height="1441" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="24" src="./../wp-content/uploads/2025/03/20250310_200143-scaled.jpg" alt="" class="wp-image-24" style="border-style:none;border-width:0px;border-radius:0px" srcset="./../wp-content/uploads/2025/03/20250310_200143-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_200143-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_200143-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_200143-2048x1153.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"><button class="lightbox-trigger" type="button" aria-haspopup="dialog" aria-label="Enlarge image" data-wp-init="callbacks.initTriggerButton" data-wp-on-async--click="actions.showLightbox" data-wp-style--right="state.imageButtonRight" data-wp-style--top="state.imageButtonTop">
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewbox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z"></path>
-			</svg>
-		</button></figure>
+<figure class="wp-block-image size-full has-custom-border is-style-default" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><a href="./../wp-content/uploads/2025/03/20250310_200143-scaled.jpg" rel="lightbox[30]"><img fetchpriority="high" decoding="async" width="2560" height="1441" data-id="24" src="./../wp-content/uploads/2025/03/20250310_200143-scaled.jpg" alt="" class="wp-image-24" style="border-style:none;border-width:0px;border-radius:0px" srcset="./../wp-content/uploads/2025/03/20250310_200143-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_200143-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_200143-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_200143-2048x1153.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></a></figure>
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;67e489c40b355&quot;}" data-wp-interactive="core/image" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" width="2560" height="1441" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="25" src="./../wp-content/uploads/2025/03/20250310_200201-scaled.jpg" alt="" class="wp-image-25" srcset="./../wp-content/uploads/2025/03/20250310_200201-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_200201-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_200201-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_200201-2048x1153.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"><button class="lightbox-trigger" type="button" aria-haspopup="dialog" aria-label="Enlarge image" data-wp-init="callbacks.initTriggerButton" data-wp-on-async--click="actions.showLightbox" data-wp-style--right="state.imageButtonRight" data-wp-style--top="state.imageButtonTop">
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewbox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z"></path>
-			</svg>
-		</button></figure>
+<figure class="wp-block-image size-full"><a href="./../wp-content/uploads/2025/03/20250310_200201-scaled.jpg" rel="lightbox[30]"><img decoding="async" width="2560" height="1441" data-id="25" src="./../wp-content/uploads/2025/03/20250310_200201-scaled.jpg" alt="" class="wp-image-25" srcset="./../wp-content/uploads/2025/03/20250310_200201-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_200201-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_200201-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_200201-2048x1153.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px"></a></figure>
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;67e489c40b7ab&quot;}" data-wp-interactive="core/image" class="wp-block-image size-full is-style-default wp-lightbox-container" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img decoding="async" width="1441" height="2560" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="28" src="./../wp-content/uploads/2025/03/20250322_201338-scaled.jpg" alt="" class="wp-image-28" srcset="./../wp-content/uploads/2025/03/20250322_201338-scaled.jpg 1441w, ./../wp-content/uploads/2025/03/20250322_201338-1351x2400.jpg 1351w, ./../wp-content/uploads/2025/03/20250322_201338-768x1364.jpg 768w, ./../wp-content/uploads/2025/03/20250322_201338-865x1536.jpg 865w, ./../wp-content/uploads/2025/03/20250322_201338-1153x2048.jpg 1153w" sizes="(max-width: 1441px) 100vw, 1441px"><button class="lightbox-trigger" type="button" aria-haspopup="dialog" aria-label="Enlarge image" data-wp-init="callbacks.initTriggerButton" data-wp-on-async--click="actions.showLightbox" data-wp-style--right="state.imageButtonRight" data-wp-style--top="state.imageButtonTop">
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewbox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z"></path>
-			</svg>
-		</button></figure>
+<figure class="wp-block-image size-full is-style-default" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><a href="./../wp-content/uploads/2025/03/20250322_201338-scaled.jpg" rel="lightbox[30]"><img decoding="async" width="1441" height="2560" data-id="28" src="./../wp-content/uploads/2025/03/20250322_201338-scaled.jpg" alt="" class="wp-image-28" srcset="./../wp-content/uploads/2025/03/20250322_201338-scaled.jpg 1441w, ./../wp-content/uploads/2025/03/20250322_201338-1351x2400.jpg 1351w, ./../wp-content/uploads/2025/03/20250322_201338-768x1364.jpg 768w, ./../wp-content/uploads/2025/03/20250322_201338-865x1536.jpg 865w, ./../wp-content/uploads/2025/03/20250322_201338-1153x2048.jpg 1153w" sizes="(max-width: 1441px) 100vw, 1441px"></a></figure>
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;67e489c40bbd9&quot;}" data-wp-interactive="core/image" class="wp-block-image size-full wp-lightbox-container"><img loading="lazy" decoding="async" width="1441" height="2560" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="27" src="./../wp-content/uploads/2025/03/20250322_201326-scaled.jpg" alt="" class="wp-image-27" srcset="./../wp-content/uploads/2025/03/20250322_201326-scaled.jpg 1441w, ./../wp-content/uploads/2025/03/20250322_201326-1351x2400.jpg 1351w, ./../wp-content/uploads/2025/03/20250322_201326-768x1364.jpg 768w, ./../wp-content/uploads/2025/03/20250322_201326-865x1536.jpg 865w, ./../wp-content/uploads/2025/03/20250322_201326-1153x2048.jpg 1153w" sizes="auto, (max-width: 1441px) 100vw, 1441px"><button class="lightbox-trigger" type="button" aria-haspopup="dialog" aria-label="Enlarge image" data-wp-init="callbacks.initTriggerButton" data-wp-on-async--click="actions.showLightbox" data-wp-style--right="state.imageButtonRight" data-wp-style--top="state.imageButtonTop">
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewbox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z"></path>
-			</svg>
-		</button></figure>
+<figure class="wp-block-image size-full"><a href="./../wp-content/uploads/2025/03/20250322_201326-scaled.jpg" rel="lightbox[30]"><img loading="lazy" decoding="async" width="1441" height="2560" data-id="27" src="./../wp-content/uploads/2025/03/20250322_201326-scaled.jpg" alt="" class="wp-image-27" srcset="./../wp-content/uploads/2025/03/20250322_201326-scaled.jpg 1441w, ./../wp-content/uploads/2025/03/20250322_201326-1351x2400.jpg 1351w, ./../wp-content/uploads/2025/03/20250322_201326-768x1364.jpg 768w, ./../wp-content/uploads/2025/03/20250322_201326-865x1536.jpg 865w, ./../wp-content/uploads/2025/03/20250322_201326-1153x2048.jpg 1153w" sizes="auto, (max-width: 1441px) 100vw, 1441px"></a></figure>
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;67e489c40bf76&quot;}" data-wp-interactive="core/image" class="wp-block-image size-full wp-lightbox-container"><img loading="lazy" decoding="async" width="2560" height="1441" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on-async--click="actions.showLightbox" data-wp-on-async--load="callbacks.setButtonStyles" data-wp-on-async-window--resize="callbacks.setButtonStyles" data-id="29" src="./../wp-content/uploads/2025/03/20250310_182432-scaled.jpg" alt="" class="wp-image-29" srcset="./../wp-content/uploads/2025/03/20250310_182432-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_182432-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_182432-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_182432-2048x1153.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px"><button class="lightbox-trigger" type="button" aria-haspopup="dialog" aria-label="Enlarge image" data-wp-init="callbacks.initTriggerButton" data-wp-on-async--click="actions.showLightbox" data-wp-style--right="state.imageButtonRight" data-wp-style--top="state.imageButtonTop">
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewbox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z"></path>
-			</svg>
-		</button></figure>
+<figure class="wp-block-image size-full"><a href="./../wp-content/uploads/2025/03/20250310_182432-scaled.jpg" rel="lightbox[30]"><img loading="lazy" decoding="async" width="2560" height="1441" data-id="29" src="./../wp-content/uploads/2025/03/20250310_182432-scaled.jpg" alt="" class="wp-image-29" srcset="./../wp-content/uploads/2025/03/20250310_182432-scaled.jpg 2560w, ./../wp-content/uploads/2025/03/20250310_182432-768x432.jpg 768w, ./../wp-content/uploads/2025/03/20250310_182432-1536x865.jpg 1536w, ./../wp-content/uploads/2025/03/20250310_182432-2048x1153.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px"></a></figure>
 </figure>
 
 
@@ -221,24 +219,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </div>
 </footer>
 </div>
-<script type="application/json" id="wp-script-module-data-@wordpress/interactivity">{"state":{"core/image":{"metadata":{"67e489c40af23":{"uploadedSrc":".//wp-content/uploads/2025/03/20250310_200143-scaled.jpg","figureClassNames":"wp-block-image size-full has-custom-border is-style-default","figureStyles":"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0","imgClassNames":"wp-image-24","imgStyles":"border-style:none;border-width:0px;border-radius:0px","targetWidth":2560,"targetHeight":1441,"scaleAttr":false,"ariaLabel":"Enlarge image","alt":""},"67e489c40b355":{"uploadedSrc":".//wp-content/uploads/2025/03/20250310_200201-scaled.jpg","figureClassNames":"wp-block-image size-full","figureStyles":null,"imgClassNames":"wp-image-25","imgStyles":null,"targetWidth":2560,"targetHeight":1441,"scaleAttr":false,"ariaLabel":"Enlarge image","alt":""},"67e489c40b7ab":{"uploadedSrc":".//wp-content/uploads/2025/03/20250322_201338-scaled.jpg","figureClassNames":"wp-block-image size-full is-style-default","figureStyles":"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0","imgClassNames":"wp-image-28","imgStyles":null,"targetWidth":1441,"targetHeight":2560,"scaleAttr":false,"ariaLabel":"Enlarge image","alt":""},"67e489c40bbd9":{"uploadedSrc":".//wp-content/uploads/2025/03/20250322_201326-scaled.jpg","figureClassNames":"wp-block-image size-full","figureStyles":null,"imgClassNames":"wp-image-27","imgStyles":null,"targetWidth":1441,"targetHeight":2560,"scaleAttr":false,"ariaLabel":"Enlarge image","alt":""},"67e489c40bf76":{"uploadedSrc":".//wp-content/uploads/2025/03/20250310_182432-scaled.jpg","figureClassNames":"wp-block-image size-full","figureStyles":null,"imgClassNames":"wp-image-29","imgStyles":null,"targetWidth":2560,"targetHeight":1441,"scaleAttr":false,"ariaLabel":"Enlarge image","alt":""}}}}}</script>
-		<div class="wp-lightbox-overlay zoom" data-wp-interactive="core/image" data-wp-context="{}" data-wp-bind--role="state.roleAttribute" data-wp-bind--aria-label="state.currentImage.ariaLabel" data-wp-bind--aria-modal="state.ariaModal" data-wp-class--active="state.overlayEnabled" data-wp-class--show-closing-animation="state.showClosingAnimation" data-wp-watch="callbacks.setOverlayFocus" data-wp-on--keydown="actions.handleKeydown" data-wp-on-async--touchstart="actions.handleTouchStart" data-wp-on--touchmove="actions.handleTouchMove" data-wp-on-async--touchend="actions.handleTouchEnd" data-wp-on-async--click="actions.hideLightbox" data-wp-on-async-window--resize="callbacks.setOverlayStyles" data-wp-on-async-window--scroll="actions.handleScroll" tabindex="-1">
-				<button type="button" aria-label="Close" style="fill: var(--wp--preset--color--contrast)" class="close-button">
-					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg>
-				</button>
-				<div class="lightbox-image-container">
-					<figure data-wp-bind--class="state.currentImage.figureClassNames" data-wp-bind--style="state.figureStyles">
-						<img data-wp-bind--alt="state.currentImage.alt" data-wp-bind--class="state.currentImage.imgClassNames" data-wp-bind--style="state.imgStyles" data-wp-bind--src="state.currentImage.currentSrc">
-					</figure>
-				</div>
-				<div class="lightbox-image-container">
-					<figure data-wp-bind--class="state.currentImage.figureClassNames" data-wp-bind--style="state.figureStyles">
-						<img data-wp-bind--alt="state.currentImage.alt" data-wp-bind--class="state.currentImage.imgClassNames" data-wp-bind--style="state.imgStyles" data-wp-bind--src="state.enlargedSrc">
-					</figure>
-				</div>
-				<div class="scrim" style="background-color: var(--wp--preset--color--base)" aria-hidden="true"></div>
-				<style data-wp-text="state.overlayStyles"></style>
-		</div>
 <script id="wp-block-template-skip-link-js-after">( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
 			sibling,
@@ -277,5 +257,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		// Inject the skip link.
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );</script>
+<script src="./../wp-content/plugins/wp-jquery-lightbox/lightboxes/wp-jquery-lightbox/vendor/jquery.touchwipe.min.js?ver=2.3.3" id="wp-jquery-lightbox-swipe-js"></script>
+<script src="./../wp-content/plugins/wp-jquery-lightbox/inc/purify.min.js?ver=2.3.3" id="wp-jquery-lightbox-purify-js"></script>
+<script src="./../wp-content/plugins/wp-jquery-lightbox/lightboxes/wp-jquery-lightbox/vendor/panzoom.min.js?ver=2.3.3" id="wp-jquery-lightbox-panzoom-js"></script>
+<script id="wp-jquery-lightbox-js-extra">var JQLBSettings = {"showTitle":"1","useAltForTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"1","resizeSpeed":"400","showDownload":"","navbarOnTop":"","marginSize":"40","mobileMarginSize":"10","slideshowSpeed":"4000","allowPinchZoom":"1","borderSize":"6","borderColor":"#ffffff","overlayColor":"#ffffff","overlayOpacity":"0.7","newNavStyle":"1","fixedNav":"1","showInfoBar":"1","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(Pause Slideshow)","play":"(Play Slideshow)"};</script>
+<script src="./../wp-content/plugins/wp-jquery-lightbox/lightboxes/wp-jquery-lightbox/jquery.lightbox.js?ver=2.3.3" id="wp-jquery-lightbox-js"></script>
 </body>
 </html>
